@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - SODA-SARBATH</title>
+    <link rel="icon" type="image/png" href="Untitled design.png">
+    <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="style.css">
+
+ <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@400;700&family=Poppins:wght@300;400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="bg-[#EEF4E6] text-[#0A2F1C] font-sans relative flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="w-full z-50 transition-all duration-300 bg-[#EEF4E6]/95 backdrop-blur-md shadow-sm" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="index.html"
+                class="text-2xl font-bold font-['Lobster'] tracking-wider text-[#39853B] hover:opacity-80 transition">
+                Soda Sarbath
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="index.html#story" class="nav-link">Our Root</a>
+                <a href="index.html#ingredients" class="nav-link">Ingredients</a>
+                <a href="index.html#product" class="nav-link">Product</a>
+                <a href="index.html#process" class="nav-link">process</a>
+            </div>
+
+            <!-- Mobile Menu Button (Simplified for this page) -->
+            <a href="index.html" class="md:hidden text-[#39853B] text-lg font-medium">
+                Back to Home
+            </a>
+        </div>
+    </nav>
+
+    <!-- Contact Section -->
+    <section class="flex-grow flex items-center justify-center p-6 animate-fade-in">
+        <div
+            class="max-w-4xl w-full bg-white/60 backdrop-blur-lg rounded-2xl shadow-xl overflow-hidden flex flex-col md:flex-row border border-white/50">
+
+            <!-- Contact Info / Logo Side -->
+            <div
+                class="md:w-1/2 p-8 bg-[#39853B] text-white flex flex-col justify-center items-center text-center relative overflow-hidden">
+                <!-- Background decoration -->
+                <div
+                    class="absolute inset-0 bg-[url('Untitled design.png')] bg-cover bg-center opacity-10 mix-blend-overlay">
+                </div>
+
+                <img src="Untitled design.png" alt="Soda Sarbath Logo"
+                    class="w-32 mb-6 drop-shadow-md relative z-10">
+
+                <h2 class="text-3xl font-bold mb-4 font-['Lobster'] relative z-10">Get in Touch</h2>
+                <p class="mb-6 relative z-10">Have questions about our refreshing soda sarbath? We'd love to hear from
+                    you!</p>
+
+                <div class="space-y-4 text-left w-full max-w-xs relative z-10">
+                  
+                    <div class="flex items-center gap-3">
+                        <i class="fas fa-envelope text-green-300 w-6 text-center"></i>
+                        <a href="mailto:wellknownfoodsandbeverages@gmail.com"
+                            class="hover:text-green-200 transition">wellknownfoodsandbeverages@gmail.com</a>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <i class="fab fa-instagram text-green-300 w-6 text-center"></i>
+                        <a href="https://www.instagram.com/najaaaaaa.___?igsh=MTd4eTVrdDdmZnk1ZA%3D%3D&utm_source=qr"
+                            target="_blank" class="hover:text-green-200 transition">@najaaaaaa.___</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form Side -->
+            <div class="md:w-1/2 p-8 md:p-12">
+                <form class="space-y-4" id="contactForm">
+
+    <div class="form-group">
+        <label class="form-label">Full Name</label>
+        <input type="text" name="name" class="form-input" placeholder="John Doe" required>
+    </div>
+
+    <div class="form-group">
+        <label class="form-label">Email Address</label>
+        <input type="email" name="email" class="form-input" placeholder="john@example.com" required>
+    </div>
+
+    <div class="form-group">
+        <label class="form-label">Message</label>
+        <textarea name="message" rows="4" class="form-textarea" required></textarea>
+    </div>
+
+    <button type="submit" class="submit-btn">Send Message</button>
+
+</form>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-6 text-center bg-[#39853B] text-white mt-auto">
+          <div class="flex justify-center gap-6 mb-4 text-2xl">
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/najaaaaaa.___?igsh=MTd4eTVrdDdmZnk1ZA%3D%3D&utm_source=qr"
+                target="_blank" aria-label="Instagram" class="hover:text-green-300 transition">
+                <i class="fab fa-instagram"></i>
+            </a>
+
+
+            <!-- Email -->
+            <a href="mailto:wellknownfoodsandbeverages@gmail.com" aria-label="Email"
+                class="hover:text-green-300 transition">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+        <p class="text-sm">&copy; 2025 Soda Sarbath. All rights reserved.</p>
+    </footer>
+<script src="sc.js"></script>
+</body>
+
+</html>
