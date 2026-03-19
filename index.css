@@ -183,28 +183,31 @@ p {
   }
 }
 
+
+/* footer */
+footer {
+  position: relative;
+  z-index: 1;
+  margin: 16px !important;
+  border-radius: 0px;
+  overflow: hidden;
+}
+
+@media (min-width: 640px) {
+  footer {
+    margin: 24px !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  footer {
+    margin: 32px !important;
+  }
+}
+
 /* ===============================
    Feedback Button & Modal
 ================================= */
-.feedback-btn {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  width: 60px;
-  height: 60px;
-  background-color: #39853B;
-  color: white;
-  border-radius: 50%;
-  box-shadow: 0 4px 15px rgba(57, 133, 59, 0.4);
-  cursor: pointer;
-  z-index: 1000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: none;
-  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  font-size: 1.5rem;
-}
 
 .feedback-btn:hover {
   transform: scale(1.1) rotate(5deg);
@@ -228,6 +231,34 @@ p {
 
 .feedback-btn:hover .tooltip {
   opacity: 1;
+}
+
+.feedback-btn {
+  position: fixed;
+  bottom: clamp(16px, 4vw, 30px);
+  right: clamp(16px, 4vw, 30px);
+  width: clamp(48px, 8vw, 60px);
+  height: clamp(48px, 8vw, 60px);
+  background-color: #1b5e20;
+  /* ← changed to black */
+  color: white;
+  border-radius: 50%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  font-size: clamp(1.1rem, 3vw, 1.5rem);
+}
+
+.feedback-btn:hover {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 8px 25px #1b5e20;
+  background-color: #1b5e20;
+  /* ← dark grey on hover */
 }
 
 /* Modal Overlay */
@@ -444,10 +475,9 @@ p {
 }
 
 #mobileMenu.open {
-  transform: translateY(0);
-  opacity: 1;
-  z-index: 40;
-  /* Below nav bar proper but visible */
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(0) !important;
 }
 
 *,
