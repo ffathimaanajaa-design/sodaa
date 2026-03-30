@@ -13,6 +13,11 @@ html {
   font-size: 16px;
 }
 
+
+img {
+  max-width: 100%;
+  height: auto;
+}
 body {
   scroll-behavior: smooth;
   overflow-x: hidden;
@@ -183,26 +188,25 @@ section.animate {
    Responsive Typography
 ================================= */
 h1 {
-  font-size: clamp(2rem, 5vw, 4rem);
+  -size: clamp(2rem, 5vw, 4rem);
 }
 
 h2 {
-  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  -size: clamp(1.5rem, 4vw, 2.5rem);
 }
 
 p {
-  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  -size: clamp(0.9rem, 2vw, 1.1rem);
 }
 
 /* ===============================
-   Custom Font Position Fix
+   Custom  Position Fix
 ================================= */
 .font {
   font-family: 'League Spartan';
   letter-spacing: 1px;
-  position: relative;
-  right: 10%;
-  top: -200px;
+  position: static; /* remove shifting */
+  text-align: center;
 }
 
 /* Fix extreme positioning on mobile */
@@ -1032,4 +1036,19 @@ h2.heading {
   line-height: 1;
   pointer-events: none;
   user-select: none;
+}
+@media (max-width: 768px) {
+  #product .rounded-full {
+    width: 250px !important;
+    height: 250px !important;
+  }
+}
+.slider-outer {
+  aspect-ratio: 16/9; /* better for mobile */
+}
+
+@media (max-width: 768px) {
+  .slider-outer {
+    aspect-ratio: 16/10;
+  }
 }
