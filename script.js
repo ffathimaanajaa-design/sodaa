@@ -178,4 +178,18 @@ document.getElementById("feedbackForm").addEventListener("submit", function(e) {
   }, { threshold: 0.12 });
   reveals.forEach(el => io.observe(el));
 
+let current = 0;
 
+function getSlides() {
+    return document.querySelectorAll('.slide');
+}
+
+function goTo(n) {
+    const slides = getSlides();
+    slides[current].classList.remove('active');
+    current = (n + slides.length) % slides.length;
+    slides[current].classList.add('active');
+}
+
+// Auto-change every 4 seconds
+setInterval(() => goTo(current + 1), 2000);
