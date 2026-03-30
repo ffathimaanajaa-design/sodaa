@@ -1,10 +1,3 @@
-
-
-
-
-
-
-// Intersection Observer for section animations
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -17,13 +10,10 @@ const observer = new IntersectionObserver((entries) => {
         }
     });
 }, observerOptions);
-
-// Observe all sections
 document.querySelectorAll('section').forEach(section => {
     observer.observe(section);
 });
 
-// Smooth scroll for navigation (if added later)
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -33,7 +23,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// 3D Tilt Effect
 document.querySelectorAll('.tilt-card').forEach(card => {
     card.addEventListener('mousemove', (e) => {
         const rect = card.getBoundingClientRect();
@@ -54,7 +43,6 @@ document.querySelectorAll('.tilt-card').forEach(card => {
     });
 });
 
-// Feedback Modal Logic
 const feedbackBtn = document.getElementById('feedbackBtn');
 const feedbackModal = document.getElementById('feedbackModal');
 const closeModal = document.getElementById('closeModal');
@@ -99,12 +87,10 @@ if (feedbackBtn && feedbackModal && closeModal && feedbackForm) {
     });
 }
 
-// Navigation Bar Logic
 const navbar = document.getElementById('navbar');
 const mobileMenuBtn = document.getElementById('mobileMenuBtn');
 const mobileMenu = document.getElementById('mobileMenu');
 
-// Scroll Effect
 window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
         navbar.classList.add('scrolled');
@@ -113,13 +99,9 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Mobile Menu Toggle
 if (mobileMenuBtn && mobileMenu) {
     mobileMenuBtn.addEventListener('click', () => {
-        // Toggle the 'open' class defined in CSS
         mobileMenu.classList.toggle('open');
-
-        // Also toggle the icon between bars and times (X)
         const icon = mobileMenuBtn.querySelector('i');
         if (icon) {
             if (mobileMenu.classList.contains('open')) {
@@ -144,10 +126,6 @@ if (mobileMenuBtn && mobileMenu) {
         });
     });
 }
-
-
-
-
 document.getElementById("feedbackForm").addEventListener("submit", function(e) {
     e.preventDefault();
 
@@ -169,7 +147,6 @@ document.getElementById("feedbackForm").addEventListener("submit", function(e) {
         console.error(error);
     });
 });
-  // Scroll reveal
   const reveals = document.querySelectorAll('.reveal');
   const io = new IntersectionObserver((entries) => {
     entries.forEach(e => {
@@ -190,6 +167,4 @@ function goTo(n) {
     current = (n + slides.length) % slides.length;
     slides[current].classList.add('active');
 }
-
-// Auto-change every 4 seconds
 setInterval(() => goTo(current + 1), 2000);
