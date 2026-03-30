@@ -1,7 +1,7 @@
 
 
 
-// Hero animation replaced with native Video tag
+
 
 
 // Intersection Observer for section animations
